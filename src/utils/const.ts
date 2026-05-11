@@ -52,7 +52,7 @@ const IS_CHINESE = true;
 const USE_ANIMATION_FOR_GRID = true;
 const CHINESE_INFO_MESSAGE = (yearLength: number, year: string): string => {
   const yearStr = year === 'Total' ? '所有' : ` ${year} `;
-  return `记录自己跑步 ${yearLength} 年了，下面列表展示的是${yearStr}的数据`;
+  return `I’ve been tracking my running progress for ${yearLength} ${yearLength > 1 ? 'years' : 'year'}. Explore my training data for ${year}.`;
 };
 const ENGLISH_INFO_MESSAGE = (yearLength: number, year: string): string =>
   `Running Journey with ${yearLength} Years, the table shows year ${year} data`;
@@ -222,6 +222,7 @@ export const CYCLING_COLOR = 'rgb(51,255,87)';
 export const HIKING_COLOR = 'rgb(151,51,255)';
 export const WALKING_COLOR = HIKING_COLOR;
 export const SWIMMING_COLOR = 'rgb(255,51,51)';
+export const INDOOR_COLOR = '#8899aa';
 
 // map tiles vendor, maptiler or mapbox or stadiamaps
 // if you want to use maptiler, set the access token in MAP_TILE_ACCESS_TOKEN
@@ -312,6 +313,13 @@ export const MAP_TILE_STYLES = {
   default: 'mapbox://styles/mapbox/dark-v10',
 };
 
+export const getMapTileVendorStyles = (
+  vendor: string
+): Record<string, string> | undefined => {
+  const styles = MAP_TILE_STYLES[vendor as keyof typeof MAP_TILE_STYLES];
+  return typeof styles === 'object' ? styles : undefined;
+};
+
 // Configuration validation
 if (typeof window !== 'undefined') {
   // Validate token requirements
@@ -336,7 +344,7 @@ if (typeof window !== 'undefined') {
   }
 
   // Validate style matches vendor
-  const vendorStyles = (MAP_TILE_STYLES as any)[MAP_TILE_VENDOR];
+  const vendorStyles = getMapTileVendorStyles(MAP_TILE_VENDOR);
   if (vendorStyles && !vendorStyles[MAP_TILE_STYLE_LIGHT]) {
     console.error(
       `❌ Style "${MAP_TILE_STYLE_LIGHT}" is not valid for vendor "${MAP_TILE_VENDOR}"\n` +
