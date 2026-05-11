@@ -231,8 +231,8 @@ export const INDOOR_COLOR = '#8899aa';
 export const MAP_TILE_VENDOR = 'maptiler';
 
 // map tiles style name, see MAP_TILE_STYLES for more details
-export const MAP_TILE_STYLE_LIGHT = 'dataviz-blueLine';
-export const MAP_TILE_STYLE_DARK = 'backdrop-dark-3D';
+export const MAP_TILE_STYLE_LIGHT = 'dataviz-light';
+export const MAP_TILE_STYLE_DARK = 'backdrop-dark';
 
 // access token. you can apply a new one, it's free.
 // maptiler: Gt5R0jT8tuIYxW6sNrAg | sign up at https://cloud.maptiler.com/auth/widget
@@ -258,37 +258,32 @@ export const MAP_TILE_STYLES = {
     // Use free, tokenless styles to avoid requiring an API key
     'osm-bright': 'https://tiles.openfreemap.org/styles/bright',
     'dark-matter': 'https://tiles.openfreemap.org/styles/dark',
-  },
+    },
   maptiler: {
     'dataviz-light': 'https://api.maptiler.com/maps/dataviz-v4/style.json?key=',
-    'dataviz-blueLine':
-      'https://api.maptiler.com/maps/019cc1f2-1c5f-7025-8b79-6cc663ffb443/style.json?key=',
-    'backdrop-3D':
-      'https://api.maptiler.com/maps/019cc21a-109c-7408-8d4e-31d8d06dc326/style.json?key=',
-    'backdrop-dark-3D':
-      'https://api.maptiler.com/maps/019cc225-be32-73a2-aa30-9664841e1c8a/style.json?key=',
-    'dataviz-dark':
-      'https://api.maptiler.com/maps/dataviz-dark/style.json?key=',
+    'dataviz-dark': 'https://api.maptiler.com/maps/dataviz-dark/style.json?key=',
+
+    'backdrop-light': 'https://api.maptiler.com/maps/backdrop-v4-light/style.json?key=',
+    'backdrop-dark': 'https://api.maptiler.com/maps/backdrop-v4-dark/style.json?key=',
+
     'basic-light': 'https://api.maptiler.com/maps/basic-v2/style.json?key=',
     'basic-dark': 'https://api.maptiler.com/maps/basic-v2-dark/style.json?key=',
+
     'streets-light': 'https://api.maptiler.com/maps/streets-v4/style.json?key=',
-    'streets-dark':
-      'https://api.maptiler.com/maps/streets-v4-dark/style.json?key=',
+    'streets-dark': 'https://api.maptiler.com/maps/streets-v4-dark/style.json?key=',
+
     'outdoor-light': 'https://api.maptiler.com/maps/outdoor-v4/style.json?key=',
-    'outdoor-dark':
-      'https://api.maptiler.com/maps/outdoor-v4-dark/style.json?key=',
+    'outdoor-dark': 'https://api.maptiler.com/maps/outdoor-v4-dark/style.json?key=',
+
     'bright-light': 'https://api.maptiler.com/maps/bright-v2/style.json?key=',
-    'bright-dark':
-      'https://api.maptiler.com/maps/bright-v2-dark/style.json?key=',
+    'bright-dark': 'https://api.maptiler.com/maps/bright-v2-dark/style.json?key=',
+
     'topo-light': 'https://api.maptiler.com/maps/topo-v4/style.json?key=',
     'topo-dark': 'https://api.maptiler.com/maps/topo-v2-dark/style.json?key=',
+
     'winter-light': 'https://api.maptiler.com/maps/winter-v4/style.json?key=',
-    'winter-dark':
-      'https://api.maptiler.com/maps/winter-v4-dark/style.json?key=',
-    'backdrop-light':
-      'https://api.maptiler.com/maps/backdrop-v4-light/style.json?key=',
-    'backdrop-dark':
-      'https://api.maptiler.com/maps/backdrop-v4-dark/style.json?key=',
+    'winter-dark': 'https://api.maptiler.com/maps/winter-v4-dark/style.json?key=',
+
     hybrid: 'https://api.maptiler.com/maps/hybrid/style.json?key=',
   },
 
