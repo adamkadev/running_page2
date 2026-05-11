@@ -16,17 +16,17 @@ const getBasePath = () => {
 
 const data: ISiteMetadataResult = {
   siteTitle: 'Running Page',
-  siteUrl: 'https://yihong.run',
-  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtc69JxHNcmN1ETpMUX4dozAgAN6iPjWalQ&usqp=CAU',
-  description: 'Personal site and blog',
+  siteUrl: 'https://adamkadev-running.vercel.app',
+  logo: 'https://i.pinimg.com/474x/04/30/09/043009d171bddd838f2696cc955bcfb5.jpg',
+  description: 'Running',
   navLinks: [
     {
       name: 'Summary',
       url: `${getBasePath()}/summary`,
     },
     {
-      name: 'Blog',
-      url: 'https://github.com/yihong0618/gitblog',
+      name: 'GitHub',
+      url: 'https://github.com/adamkadev',
     },
     {
       name: 'About',
