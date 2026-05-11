@@ -258,31 +258,38 @@ export const MAP_TILE_STYLES = {
     // Use free, tokenless styles to avoid requiring an API key
     'osm-bright': 'https://tiles.openfreemap.org/styles/bright',
     'dark-matter': 'https://tiles.openfreemap.org/styles/dark',
-    },
+  },
   maptiler: {
     'dataviz-light': 'https://api.maptiler.com/maps/dataviz-v4/style.json?key=',
-    'dataviz-dark': 'https://api.maptiler.com/maps/dataviz-dark/style.json?key=',
+    'dataviz-dark':
+      'https://api.maptiler.com/maps/dataviz-dark/style.json?key=',
 
-    'backdrop-light': 'https://api.maptiler.com/maps/backdrop-v4-light/style.json?key=',
-    'backdrop-dark': 'https://api.maptiler.com/maps/backdrop-v4-dark/style.json?key=',
+    'backdrop-light':
+      'https://api.maptiler.com/maps/backdrop-v4-light/style.json?key=',
+    'backdrop-dark':
+      'https://api.maptiler.com/maps/backdrop-v4-dark/style.json?key=',
 
     'basic-light': 'https://api.maptiler.com/maps/basic-v2/style.json?key=',
     'basic-dark': 'https://api.maptiler.com/maps/basic-v2-dark/style.json?key=',
 
     'streets-light': 'https://api.maptiler.com/maps/streets-v4/style.json?key=',
-    'streets-dark': 'https://api.maptiler.com/maps/streets-v4-dark/style.json?key=',
+    'streets-dark':
+      'https://api.maptiler.com/maps/streets-v4-dark/style.json?key=',
 
     'outdoor-light': 'https://api.maptiler.com/maps/outdoor-v4/style.json?key=',
-    'outdoor-dark': 'https://api.maptiler.com/maps/outdoor-v4-dark/style.json?key=',
+    'outdoor-dark':
+      'https://api.maptiler.com/maps/outdoor-v4-dark/style.json?key=',
 
     'bright-light': 'https://api.maptiler.com/maps/bright-v2/style.json?key=',
-    'bright-dark': 'https://api.maptiler.com/maps/bright-v2-dark/style.json?key=',
+    'bright-dark':
+      'https://api.maptiler.com/maps/bright-v2-dark/style.json?key=',
 
     'topo-light': 'https://api.maptiler.com/maps/topo-v4/style.json?key=',
     'topo-dark': 'https://api.maptiler.com/maps/topo-v2-dark/style.json?key=',
 
     'winter-light': 'https://api.maptiler.com/maps/winter-v4/style.json?key=',
-    'winter-dark': 'https://api.maptiler.com/maps/winter-v4-dark/style.json?key=',
+    'winter-dark':
+      'https://api.maptiler.com/maps/winter-v4-dark/style.json?key=',
 
     hybrid: 'https://api.maptiler.com/maps/hybrid/style.json?key=',
   },
