@@ -101,7 +101,7 @@ def main():
         dest="track_color",
         metavar="COLOR",
         type=str,
-        default="#F5E1EE",
+        default="#8FD3B6",
         help='Color of tracks (default: "#4DD2FF").',
     )
     args_parser.add_argument(
@@ -109,7 +109,7 @@ def main():
         dest="track_color2",
         metavar="COLOR",
         type=str,
-        default="#800D55",
+        default="#1F5D50",
         help="Secondary color of tracks (default: none).",
     )
     args_parser.add_argument(
@@ -117,20 +117,20 @@ def main():
         dest="text_color",
         metavar="COLOR",
         type=str,
-        default="#FFFFFF",
+        default="#D7F2E5",
         help='Color of text (default: "#FFFFFF").',
     )
     args_parser.add_argument(
         "--special-color",
         dest="special_color",
         metavar="COLOR",
-        default="#E18ABF",
+        default="#4ADE80",
         help='Special track color (default: "#FFFF00").',
     )
     args_parser.add_argument(
         "--special-color2",
         dest="special_color2",
-        default="#C71585",
+        default="#FACC15",
         metavar="COLOR",
         help="Secondary color of special tracks (default: none).",
     )
@@ -152,7 +152,7 @@ def main():
         dest="special_distance",
         metavar="DISTANCE",
         type=float,
-        default=10.0,
+        default=7.0,
         help="Special Distance1 by km and color with the special_color",
     )
     args_parser.add_argument(
@@ -160,7 +160,7 @@ def main():
         dest="special_distance2",
         metavar="DISTANCE",
         type=float,
-        default=20.0,
+        default=12.0,
         help="Special Distance2 by km and corlor with the special_color2",
     )
     args_parser.add_argument(
@@ -270,7 +270,7 @@ def main():
     p.colors = {
         "background": args.background_color,
         "track": args.track_color,
-        "track2": args.track_color2 or args.track_color,
+        "track2": args.track_color2,
         "special": args.special_color,
         "special2": args.special_color2,
         "text": args.text_color,
@@ -288,14 +288,10 @@ def main():
     p.github_style = args.github_style
 
     if args.type == "circular":
-        if args.background_color == "#222222":
-            p.colors["background"] = "#1a1a1a"
-        if args.track_color == "#4DD2FF":
-            p.colors["track"] = "red"
-        if args.special_color == "#FFFF00":
-            p.colors["special"] = "yellow"
-        if args.text_color == "#FFFFFF":
-            p.colors["text"] = "#e1ed5e"
+        if args.background_color == "#0B1210":
+            p.colors["background"] = "#0B1210"
+        if args.text_color == "#D7F2E5":
+            p.colors["text"] = "#D7F2E5"
 
     # for special circular
     if is_circular:

@@ -70,39 +70,57 @@
 
 /* 2. Manual Override (Higher Priority) */
 [data-theme='light'] {
-  --color-brand: #1e3a8a;
-  --color-secondary: var(--color-sky-800);
-  --color-bg: rgba(245, 245, 245, 0.5);
-  --color-tx: var(--color-sky-900);
-  --color-hr: var(--color-neutral-300);
-  --color-selected: var(--color-sky-900);
-  --color-run-date: #1e3a8a;
-  --color-run-table-thead: var(--color-neutral-800);
-  --color-run-row-hover-background: rgba(245, 245, 245, 0.5);
-  --color-activity-card: var(--color-neutral-300);
-  --svg-color-inactive-cell: var(--color-neutral-600);
-  --svg-color-active-cell: #f5e1ee;
-  --svg-special-color: #e18abf;
-  --svg-special-color2: #800d55;
+  --color-brand: #1F5D50;
+  --color-secondary: #6FAFC3;
+
+  --color-bg: rgba(255,255,255,0.42);
+  --color-bg-card: rgba(255,255,255,0.58);
+
+  --color-tx: #17342D;
+  --color-hr: rgba(31,93,80,0.15);
+
+  --color-selected: #1F5D50;
+  --color-run-date: #1F5D50;
+
+  --color-run-table-thead: #214239;
+  --color-run-row-hover-background: rgba(255,255,255,0.30);
+
+  --color-activity-card: rgba(255,255,255,0.60);
+
+  --svg-color-inactive-cell: #A7B9B0;
+  --svg-color-active-cell: #6FAFC3;
+
+  --svg-special-color: #9BCB63;
+  --svg-special-color2: #DCE85E;
+
   --font-sans: 'IBM Plex Sans', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
 }
 
 [data-theme='dark'] {
-  /* const nike = 'rgb(224,237,94)'; */
-  --color-brand: #ff2099;
-  --color-secondary: #ccd94a;
-  --color-bg: var(--color-neutral-900);
-  --color-tx: var(--color-brand);
-  --color-hr: var(--color-red-500);
-  --color-selected: var(--color-brand);
-  --color-run-date: #ff2099;
-  --color-run-table-thead: var(--color-zinc-300);
-  --color-run-row-hover-background: var(--color-neutral-800);
-  --color-activity-card: var(--color-neutral-700);
-  --svg-color-active-cell: #f5e1ee;
-  --svg-special-color: #e18abf;
-  --svg-special-color2: #800d55;
+  --color-brand: #8FD3B6;
+  --color-secondary: #7AB7D0;
+
+  --color-bg: #0B1210;
+  --color-bg-card: #15211D;
+
+  --color-tx: #D7F2E5;
+  --color-hr: rgba(143,211,182,0.15);
+
+  --color-selected: #8FD3B6;
+  --color-run-date: #8FD3B6;
+
+  --color-run-table-thead: #D0E7DC;
+  --color-run-row-hover-background: #1A2924;
+
+  --color-activity-card: #1D2D27;
+
+  --svg-color-inactive-cell: #355148;
+  --svg-color-active-cell: #7AB7D0;
+
+  --svg-special-color: #9BCB63;
+  --svg-special-color2: #D7F2E5;
+
   --font-sans: 'IBM Plex Sans', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
 }
@@ -133,23 +151,33 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 直接在 CSS 文件末尾添加，风险最小 */
 body::before {
   content: '';
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('https://i.postimg.cc/rp8pd2vs/bg-09.jpg') no-repeat center
-    center fixed;
-  background-size: cover;
-  /* filter: blur(10px); */
-  border-radius: 8px;
-  /* 模糊 10px，并稍微调暗 */
+  inset: 0;
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.18),
+      rgba(255,255,255,0.28)
+    ),
+    url('https://i.postimg.cc/HkTfD8zR/bg-01.jpg')
+    center center / cover no-repeat;
+  z-index: -2;
+  transform: scale(1.05);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(3px);
   z-index: -1;
-  transform: scale(1.1);
-  /* 消除模糊边缘的白边 */
+}
+
+/* Remove image in dark mode */
+[data-theme='dark'] body::before,
+[data-theme='dark'] body::after {
+  display: none;
 }
 
 iframe {

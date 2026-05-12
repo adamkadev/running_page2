@@ -48,7 +48,7 @@ class Poster:
         self.units = "metric"
         self.colors = {
             "background": "#222222",
-            "text": "#E18ABF",
+            "text": "#9BCB63",
             "track": "#4DD2FF",
         }
         self.special_distance = {"special_distance": 10, "special_distance2": 20}
